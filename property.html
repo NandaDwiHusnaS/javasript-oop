@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    <script>
+
+        function Person(firstname, lastname){
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.sayHello = function (name){
+                console.info(`Hello ${name} My name is ${this.firstname}`)
+            }
+        }
+
+        Person.prototype.sayBye = function (){
+            console.info("Good Bye");
+        }
+
+        Person.prototype.run = function(){
+            console.info(`${this.firstname} Is Running`)
+        }
+
+        const eko = new Person("Nanda", "Dwi");
+        const budi = new Person()
+
+        console.log(eko);
+        eko.sayBye();
+        eko.run();
+
+    </script>
+
+</body>
+</html>
